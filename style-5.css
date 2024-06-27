@@ -1,0 +1,21 @@
+
+form{
+    margin-top: 50px;
+    height: 800px;
+    width: 800px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E9E9E9;
+    padding-left: 20px;
+
+}
+
+label{
+    font-weight: bold;
+}
+img{
+    height: 15px;
+    width: 15px;
+}
+

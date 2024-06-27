@@ -1,0 +1,33 @@
+.col1{
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+h2{
+    color: blue;
+    
+}
+
+
+.container{
+    height: 700px;
+    width: 750px;
+    background :linear-gradient(20deg,rgb(211, 74, 190),yellow);
+}
+
+.int{
+    width: 405px;
+}
+
+button{
+    height: 30px;
+    width: 80px;
+    border-radius: 6px;
+    background-color: red;
+}
+.tbl{
+    border-spacing: 0 10px;
+}

@@ -1,0 +1,31 @@
+
+body{
+    padding-top: 100px;
+   
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-top: solid black 2px ; 
+}
+
+
+.card-link{
+    
+    color: #ffab40;
+}
+
+.image{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4ch;
+  }

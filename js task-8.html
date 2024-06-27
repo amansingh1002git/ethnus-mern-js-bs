@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="js task-8.css">
+</head>
+<body>
+    <center>
+       <div class="container">
+        
+        <form onsubmit="return validate();" >
+            <h2>Registration form</h1>
+    
+        <table class = "tbl" >
+            <tr>
+                <td class="col1">First Name</td>
+                <td><input class="int " id="fname" classtype="text" width="100%">
+                    <label id="validfname"style = "color:red; visibility :hidden">POOR</label>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="col1">  Last Name</td>
+                <td><input class="int " id="lname"  type="text" width="100%"><label id="validlname"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+            <tr>
+                <td class="col1">Email</td>
+                <td><input class="int " id="email"  type="email" width="100%">
+                    <label id="validemail"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+            <tr>
+                <td class="col1">Password</td>
+                <td><input  class="int " id="password"  type="password" width="100%">
+                    <label id="validpassword"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+            <tr>
+                <td class="col1">Re-enter Password</td>
+                <td><input class="int " id="rpassword "  type="password" width="100%">
+                    <label id="validrpassword"style = "color:red; visibility :hidden">POOR OR MISMATCH</label></td>
+            </tr>
+
+            <tr >
+                <td class="col1">Gender</td>
+                <td>
+                    <input type="radio" name="Gender">Male <br>
+                    
+                    <input type="radio" name="Gender">Female
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">Age</td>
+                <td><input class="int " id="age"  type="number" width="100%">
+                    <label id="validage"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+
+            <tr>
+                <td class="col1">Phone Number</td>
+                <td><input class="int " id="pnumber"  type="number" width="100%">
+                    <label id="validpnumber"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+
+            <tr >
+               
+                <td class="col1">Address</td>
+                <td>
+                <textarea id="address" rows="6" cols="53" class="address"></textarea><label id="validaddress"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+           
+            <tr >
+                <td class="col1">State</td>
+                <td><input class="int" id="state"  type="text" width="100%">
+                    <label id="validstate"style = "color:red; visibility :hidden">POOR</label></td>
+            </tr>
+            <tr>
+                <td class="col1">Country</td>
+                <td><select id="country">
+                    <option value="">Choose your country </option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="Japan">Japan</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="France">France</option>
+                    <option value="Singapore">Singapore</option>
+                  </select></td>
+            </tr>
+
+            <tr>
+                <td class="col1">Language known</td>
+                <td>
+                    
+                    <input type="checkbox" name="English" id="">
+                    <label for="English">English</label>
+
+                    <input type="checkbox" name="English" id="">
+                    <label for="English">Hindi</label>
+
+                    <input type="checkbox" name="English" id="">
+                    <label for="English">Kananada</label>
+
+                    <input type="checkbox" name="English" id="">
+                    <label for="English">Telugu</label>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" >
+                <input type="checkbox" name="English" id="">
+                Hereby I declare all the given details are true
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="4"style="text-align: right;">
+                    <p>Log in to <a href="https://ethnus.com/">Ethnus</a> website</p>
+
+                </td>
+            </tr>
+
+        </table>
+    
+        <div class="butttons">
+        <button type="submit">Register</button></div>
+    </form>
+    </div>
+   </div>
+</center>
+
+
+<script src="js task-8.js"></script>
+</body>
+</html>

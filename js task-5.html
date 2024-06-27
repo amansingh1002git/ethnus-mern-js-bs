@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        .error input, .error textarea {
+            border: 1px solid red;
+        }
+        .error-message {
+            color: red;
+            display: none;
+            margin-left: 10px;
+        }
+        .error .error-message {
+            display: inline;
+        }
+        table {
+            margin-top: 150px;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            const fields = document.querySelectorAll(".form-field");
+            fields.forEach(field => {
+                field.classList.remove("error");
+            });
+
+            // Name validation
+            const nameField = document.getElementById("name");
+            if (nameField.value.trim() === "") {
+                nameField.closest(".form-field").classList.add("error");
+                isValid = false;
+            }
+
+            // Email validation
+            const emailField = document.getElementById("email");
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailField.value.match(emailPattern)) {
+                emailField.closest(".form-field").classList.add("error");
+                isValid = false;
+            }
+
+            // Website validation
+            const websiteField = document.getElementById("website");
+            const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+            if (!websiteField.value.match(urlPattern)) {
+                websiteField.closest(".form-field").classList.add("error");
+                isValid = false;
+            }
+
+            // Message validation
+            const messageField = document.getElementById("message");
+            if (messageField.value.trim() === "") {
+                messageField.closest(".form-field").classList.add("error");
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Submit the form if validation passes
+                document.getElementById("contactForm").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="contactForm" onsubmit="validateForm(event)">
+        <table align="center">
+            <tr class="form-field">
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name"></td>
+                <td><span class="error-message">This field is required</span></td>
+            </tr>
+            <tr class="form-field">
+                <td><label for="email">Email:</label></td>
+                <td><input type="text" id="email" name="email"></td>
+                <td><span class="error-message">A valid email address is required</span></td>
+            </tr>
+            <tr class="form-field">
+                <td><label for="website">Website:</label></td>
+                <td><input type="text" id="website" name="website"></td>
+                <td><span class="error-message">A valid URL is required</span></td>
+            </tr>
+            <tr class="form-field">
+                <td><label for="message">Message:</label></td>
+                <td><textarea id="message" name="message"></textarea></td>
+                <td><span class="error-message">This field is required</span></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

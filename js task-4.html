@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid black;
+            text-align: center;
+            padding: 15px;
+            
+        }
+        .showdate{
+            margin: 5px;
+        }
+        span{
+            margin: 5px;
+        }
+        .showTime{
+            margin: 5px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button onclick="getDate()" class="showdate">show date</button>
+      <br />
+      <span id="result1"></span>
+      <br />
+      <button onclick="getTime()" class="showTime">show time</button><br />
+      <span id="result2"></span>
+    </div>
+
+    <script>
+      function getDate() {
+        // const today = new Date("25 Mar 2015");
+        // const yyyy = today.getFullYear();
+        // let mm = today.getMonth() + 1; // Months start at 0!
+        // let dd = today.getDate();
+
+        // if (dd < 10) dd = "0" + dd;
+        // if (mm < 10) mm = "0" + mm;
+
+        // const formattedToday = dd + "/" + mm + "/" + yyyy;
+
+        // document.getElementById("result1").innerHTML = formattedToday;
+        const date = new Date();
+        const formattedDate = date
+          .toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          })
+          .replace(/ /g, "/");
+          document.getElementById("result1").innerHTML = formattedDate;
+      }
+      function getTime() {
+        const d = new Date();
+        document.getElementById("result2").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>
